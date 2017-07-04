@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <!--<meta keywords="Canvas"/>-->
+
+    <title>计算器</title>
+    <style>
+
+        #ans{
+            width: 93%;
+
+        }
+        input{
+            width: 48px;
+            height: 34px;
+            margin: 2px 3px;
+
+        }
+
+
+
+
+    </style>
+
+    <script type="text/javascript">
+
+
+        function calc(n){
+            document.getElementById("ans").value += n;
+        }
+
+        function op(){
+            document.getElementById("ans").value=eval(document.getElementById("ans").value);
+        }
+
+        function cl(){
+            document.getElementById("ans").value=" ";
+
+        }
+    </script>
+   <!-- <script>
+
+        function calc(){
+            var v=document.getElementById("test").value;
+            var result=document.getElementById("res");
+            var r=eval(v);
+            result.innerHTML=r;
+        }
+
+        function reset(){
+
+            var result=document.getElementById("res");
+            document.getElementById("test").value="";
+            result.innerHTML="";
+        }
+
+
+    </script>-->
+</head>
+<body>
+<!--
+
+输入计算式：
+<input type="text" id="test" placeholder="1+1">
+<input type="submit" value="计算" onclick="calc()"/>
+<input type="submit" value="清除" onclick="reset()"/>
+<p>结果为:<span id="res"></span></p>
+-->
+
+<form name="Calc">
+    <table border="3">
+        <tr>
+            <td>
+                <input type="text" id="ans" name="input">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" name="" value="1" onclick="calc('1')"/>
+                <input type="button" name="" value="2" onclick="calc('2')"/>
+                <input type="button" name="" value="3" onclick="calc('3')"/>
+                <input type="button" name="" value="+" onclick="calc('+')"/>
+                <br>
+                <input type="button" name="" value="4" onclick="calc('4')"/>
+                <input type="button" name="" value="5" onclick="calc('5')"/>
+                <input type="button" name="" value="6" onclick="calc('6')"/>
+                <input type="button" name="" value="-" onclick="calc('-')"/>
+                <br>
+                <input type="button" name="" value="7" onclick="calc('7')"/>
+                <input type="button" name="" value="8" onclick="calc('8')"/>
+                <input type="button" name="" value="9" onclick="calc('9')"/>
+                <input type="button" name="" value="*" onclick="calc('*')"/>
+                <br>
+                <input type="button" name="" value="c" onclick="cl()"/>
+                <input type="button" name="" value="0" onclick="calc('0')"/>
+                <input type="button" name="" value="=" onclick="op()"/>
+                <input type="button" name="" value="/" onclick="calc('/')"/>
+                <br>
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

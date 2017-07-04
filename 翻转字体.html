@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: cornflowerblue;
+        }
+
+        .box{
+            margin: 50px auto;
+            width: 880px;
+
+        }
+
+        .box span{
+            position: relative;
+            margin: 0 22px;
+            width: 122px;
+            height: 110px;
+            line-height: 110px;
+            text-align: center;
+            font-size: 78px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px cornflowerblue,-1px -1px 2px cornflowerblue;
+
+        }
+
+        span::before,span::after{
+            position: absolute;
+            left: 1px;
+            top: -2px;
+            width: 100%;
+            height: 100%;
+            line-height: 110px;
+            content: attr(data-text);
+            color: yellow;
+            text-shadow: 0px 0px 0px transparent;
+            transform-origin: left;
+            transition: all 1s;
+        }
+
+        span::after{
+            color:#fff;
+            transform:scale(0.95,1);
+        }
+
+        span::before{
+            color:rgba(0,0,0,0.4);
+        }
+
+
+        div:hover span::after{
+            transform:rotateY(50deg) skew(0deg,5deg);
+
+        }
+
+        div:hover span::before{
+            transform:skew(0deg,20deg) scale(0.95,1);
+
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <span data-text="计">计</span>
+    <span data-text="算">算</span>
+    <span data-text="机">机</span>
+    <span data-text="工">工</span>
+    <span data-text="程">程</span>
+    <span data-text="学">学</span>
+    <span data-text="院">院</span>
+
+</div>
+
+
+</body>
+</html>

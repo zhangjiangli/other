@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>3D旋转立方体</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        img{
+            border: 0;
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d; /*3D效果*/
+            /*-webkit-perspective: 500px;
+            -webkit-perspective-origin: 0% 50%;*/
+            -webkit-animation: run 6s linear infinite; /*添加动画，无限循环*/
+        }
+
+        @-webkit-keyframes run {
+            0%   {
+                -webkit-transform: rotateX(0deg)rotateY(0deg);
+            }
+            100% {
+                -webkit-transform: rotateX(360deg)rotateY(360deg);
+            }
+        }
+
+        li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+            font-weight: bold;
+            color: #fff;
+            border: 1px solid whitesmoke;
+            box-shadow: 2px 2px 10px blanchedalmond inset;
+        }
+
+        /*背景色和旋转*/
+        li:nth-child(1){
+            background: rgba(255,0,0,0.5);
+            -webkit-transform: rotateX(90deg)translateZ(100px);
+        }
+
+        li:nth-child(2){
+            background: rgba(0,255,255,0.5);
+            -webkit-transform: rotateX(270deg)translateZ(100px);
+        }
+
+        li:nth-child(3){
+            background: rgba(255,0,255,0.5);
+            -webkit-transform: rotateY(90deg)translateZ(100px);
+        }
+
+        li:nth-child(4){
+            background: rgba(0,255,0,0.5);
+            -webkit-transform: rotateY(270deg)translateZ(100px);
+        }
+
+        li:nth-child(5){
+            background: rgba(200,200,0,0.5);
+            -webkit-transform: translateZ(-100px);
+        }
+
+        li:nth-child(6){
+            background: rgba(0,0,255,0.5);
+            -webkit-transform: translateZ(100px);
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>

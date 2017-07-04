@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: darkslategrey;
+
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            margin: 150px auto;
+            position: relative;
+           /* background: darksalmon;*/
+            transform:rotateY(-60deg) rotateX(30deg);
+            transform-style: preserve-3d;
+            animation: myrun 5s linear infinite;
+
+        }
+
+       /* @keyframes myrun {
+            from{transform: rotateX(0deg) rotateY(0deg);}
+            to  {transform: rotateX(360deg) rotateY(360deg);}
+        }
+*/
+        @keyframes myrun {
+            0%   {transform: rotateX(0deg) rotateY(0deg);}
+            100% {transform: rotateX(360deg) rotateY(360deg);}
+        }
+
+         ul li{
+             background: sandybrown;
+             width: 200px;
+             height: 200px;
+             margin: 0 10px;
+             text-align: center;
+             line-height: 200px;
+             list-style: none;
+             font-size: 50px;
+             font-weight: bold;
+             color: #fff;
+             display: inline-block;
+             float: left;
+             animation: li-run 5s linear 5s;
+             position: absolute;
+             /*top: 0;
+             left: 0;*/
+         }
+
+
+
+        li:nth-child(1){
+            background: rgba(255,0,0,.4);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        li:nth-child(2){
+            background: rgba(0,255,255,.4);
+            transform: rotateX(270deg) translateZ(100px);
+        }
+
+        li:nth-child(3){
+            background: rgba(255,0,255,.4);
+            transform: translateZ(100px);
+        }
+
+        li:nth-child(4){
+            background: rgba(0,255,0,.4);
+            transform: translateZ(-100px);
+        }
+
+        li:nth-child(5){
+            background: rgba(200,200,0,.4);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        li:nth-child(6){
+            background: rgba(0,0,255,.4);
+            transform: rotateY(270deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>fouth</li>
+    <li>five</li>
+    <li>six</li>
+</ul>
+</body>
+</html>
